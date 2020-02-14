@@ -1,0 +1,16 @@
+.editor {
+  width: 80%;
+  margin: 0 auto;
+  display: block;
+  position: relative;
+  margin-top: 25px;
+}
+
+.t-area {
+  padding: 15px;
+  height: calc(100vh - 300px);
+  width: 100%;
+  font-family: 'Montserrat', sans-serif;
+  border-radius: 10px;
+  font-size: 18px;
+}
