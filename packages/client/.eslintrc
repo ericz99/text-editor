@@ -32,7 +32,9 @@
     "jsx-a11y/no-static-element-interactions": "off",
     "jsx-a11y/interactive-supports-focus": "off",
     "react/jsx-one-expression-per-line": "off",
-    "react/jsx-props-no-spreading": "off"
+    "react/jsx-props-no-spreading": "off",
+    "jsx-a11y/no-noninteractive-element-interactions": "off",
+    "jsx-a11y/aria-role": "off"
   },
   "parserOptions": {
     "sourceType": "module"
