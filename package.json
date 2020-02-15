@@ -6,7 +6,7 @@
   "scripts": {
     "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false cd ./packages/client && yarn install --production=false && yarn run build",
     "prod": "cd ./packages/client && yarn run build && cd ../.. && yarn run server",
-    "server": "node index.js"
+    "start": "node index.js"
   },
   "repository": "https://github.com/ericz99/portfolio-website.git",
   "author": "Eric Zhang",
