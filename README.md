@@ -2,6 +2,8 @@
 
 A simple rich text editor, built with ReactJS.
 
+- https://blooming-coast-63344.herokuapp.com/#
+
 ### Installation
 
 Text Editor requires the following...
@@ -16,17 +18,8 @@ Quick start:
 # Install dependencies
 yarn install
 
-# Run application client
-yarn run start
-
-# Run on docker compose
-yarn run up
-
-# Stop your docker compose
-yarn run stop
-
-# Delete your docker compose
-yarn run down
+# To run production server
+yarn run prod
 
 ```
 
