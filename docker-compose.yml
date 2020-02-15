@@ -5,7 +5,7 @@ services:
     container_name: website
     build: packages/client
     image: website
-  export:
+  expose:
     - '80'
   proxy:
     image: nginx:alpine
