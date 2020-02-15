@@ -15,9 +15,6 @@ Quick start:
 
 ```bash
 
-# Install dependencies
-yarn install
-
 # To run production server
 yarn run prod
 
