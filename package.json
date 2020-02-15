@@ -4,7 +4,7 @@
   "description": "New Portfolio Website for myself!",
   "main": "index.js",
   "scripts": {
-    "build": "cd ./packages/client && yarn run build",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false cd ./packages/client && yarn run install && yarn run build && cd ../.. && yarn run server",
     "prod": "cd ./packages/client && yarn run build && cd ../.. && yarn run server",
     "server": "node index.js"
   },
