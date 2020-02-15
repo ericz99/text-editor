@@ -4,10 +4,9 @@
   "description": "New Portfolio Website for myself!",
   "main": "index.js",
   "scripts": {
-    "up": "docker-compose -f docker-compose.yml up -d --build --force-recreate",
-    "down": "docker-compose -f docker-compose.yml down",
-    "stop": "docker-compose -f docker-compose.yml stop",
-    "start": "docker-compose -f docker-compose.yml restart"
+    "build": "cd ./packages/client && yarn run build",
+    "prod": "cd ./packages/client && yarn run build && cd ../.. && yarn run server",
+    "server": "node index.js"
   },
   "repository": "https://github.com/ericz99/portfolio-website.git",
   "author": "Eric Zhang",
@@ -25,5 +24,8 @@
     "eslint-plugin-react": "^7.14.3",
     "eslint-plugin-react-hooks": "^1.7.0",
     "prettier": "^1.18.2"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
   }
 }
