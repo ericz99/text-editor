@@ -32,8 +32,7 @@ const editorIcon = [
   { id: 11, class: 'justifyFull', icon: faAlignJustify, text: 'Align Justify' }
 ];
 
-export default function EditorBar({ onClick, methods }) {
-  const [color, setColor] = useState('#FF5733');
+export default function EditorBar({ onClick, methods, color, setColor }) {
   const [isToggle, setToggle] = useState(false);
   const myRef = useRef(null);
 
@@ -41,7 +40,7 @@ export default function EditorBar({ onClick, methods }) {
     if (myRef.current && !myRef.current.contains(event.target) && isToggle) {
       // # click outside
       setToggle(prev => !prev);
-      document.execCommand('foreColor', false, color);
+      document.execCommand('foreColor', true, color);
     }
   };
 
@@ -62,11 +61,12 @@ export default function EditorBar({ onClick, methods }) {
 
   const handleChangeComplete = c => {
     setColor(c.hex);
+    document.execCommand('foreColor', true, color);
   };
 
   const toggleColorPicker = e => {
     setToggle(prev => !prev);
-    document.execCommand('foreColor', false, color);
+    document.execCommand('foreColor', true, color);
   };
 
   return (

@@ -3,8 +3,8 @@ import ContentEditable from 'react-contenteditable';
 
 import './styles.css';
 
-export default function Editor({ methods }) {
-  const [html, setHtml] = useState('<p>Hello <b>World</b> !</p><p>Paragraph 2</p>');
+export default function Editor({ methods, onMouseUp }) {
+  const [html, setHtml] = useState('');
   const [editable, setEditable] = useState(true);
 
   const getTextValue = e => {
@@ -18,6 +18,7 @@ export default function Editor({ methods }) {
         className="t-area"
         tagName="pre"
         onChange={getTextValue}
+        onMouseUp={onMouseUp}
         spellCheck="true"
         html={html}
       />
